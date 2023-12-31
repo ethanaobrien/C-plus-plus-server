@@ -9,11 +9,13 @@
 //? #pragma comment(lib, "ws2_32.lib")
 
 
-class Socket {
+class Server {
     int port = 8080;
     SOCKET sock;
 public: 
     bool Start() {
+        std::cout << "Window" << std::endl;
+        
         WSADATA wsaData;
 
         if (WSAStartup(0x202, &wsaData) == SOCKET_ERROR) {
@@ -49,6 +51,5 @@ public:
         }
         std::cout << "Listening on port " << port << std::endl;
         return true;
-        std::cout << "Window" << std::endl;
     }
 };

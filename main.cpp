@@ -7,7 +7,10 @@
 #endif
 
 int main() {
-    Socket socket;
-    socket.Start();
-    
+    Server server;
+    if (!server.Start()) {
+        std::cout << "Error starting server" << std::endl;
+        return 0;
+    }
+    return 1;
 }

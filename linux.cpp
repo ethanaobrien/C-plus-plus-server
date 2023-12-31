@@ -1,9 +1,10 @@
 #include <iostream>
 
-class Socket {
+class Server {
     
 public:
-    void Start() {
+    bool Start() {
         std::cout << "Lonix" << std::endl;
+        return false;
     }
 };
